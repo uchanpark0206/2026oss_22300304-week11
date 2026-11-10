@@ -9,18 +9,18 @@ export default function CourseItem({ course, onDelete, onToggle }) {
           checked={course.completed}
           onChange={() => onToggle(course.id)}
           aria-label={`${course.name} 완료 여부`}
-        />
+        />{/*강의명*/}
         <div>
-          <div className={`course-title ${course.completed ? "done" : ""}`}>
+          <div className={`course-title ${course.completed ? "done" : ""}`}>{/*체크돼있으면 done 클래스 아니면 클래스가 없음*/ }
             {course.name}
           </div>
           <div className="course-id">Course #{course.id}</div>
-        </div>
+        </div>{/*강의아이디*/}
       </div>
       <div className="category-cell">
-        <span className="category">{course.category}</span>
+        <span className="category">{course.category}</span>{/*전공인지 선택과목인지*/}
       </div>
-      <div className="actions">
+      <div className="actions">{/*삭제버튼*/}
         <button
           className="btn danger"
           type="button"
