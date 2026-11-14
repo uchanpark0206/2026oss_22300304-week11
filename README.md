@@ -45,7 +45,11 @@ Code Analysis: 주요 코드 2개(각 5~15줄)를 선택하여 동작 원리 설
 
 STEP 3. Customizing
 
-    1.
+    1.변경 완료
 
     2-1:My Course Manager=>나의 강의 메니저
     2-2:React Component, Props & State Practice=>리엑트의 개념과리액트 컴포넌트, 속성 및 상태 실습
+
+    3.stat strong.green 에서*#16856c >>#c40909로 변경*/
+    .stat strong.blue 에서 *#4568b4>>#021d57로 변경*/
+    .small-note 에서  /*#8a94a4에서>>#fc0303로 변경 */

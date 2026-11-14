@@ -83,10 +83,10 @@ body {
   margin-top: 8px;
 }
 .stat strong.green {
-  color: #16856c;
+  color: #c40909;/*#16856c >>#c40909로 변경*/
 }
 .stat strong.blue {
-  color: #4568b4;
+  color: #021d57;/*#4568b4>>#021d57로 변경*/
 }
 .panel {
   background: white;
@@ -109,7 +109,7 @@ body {
 }
 .small-note {
   font-size: 12px;
-  color: #8a94a4;
+  color: #fc0303;/*#8a94a4에서 #080808로 변경*/
 }
 .add-form {
   display: flex;
