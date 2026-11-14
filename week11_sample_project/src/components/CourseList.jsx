@@ -4,8 +4,8 @@ import { initialCourses } from "../data/courses.js";
 
 export default function CourseList() {
   // [제공] 초기 배열을 useState로 관리합니다.
-  const [courses, setCourses] = useState(initialCourses);
-  const [newName, setNewName] = useState("");
+  const [courses, setCourses] = useState(initialCourses);//couts의 초기값 을 initialCourses로 설정
+  const [newName, setNewName] = useState("");//newName의 초기값을 ""으로 설정
 
   // [제공] 삭제 기능: filter로 새 배열을 만들어 업데이트합니다.
   function handleDelete(id) {
@@ -23,7 +23,7 @@ export default function CourseList() {
       return;
     }
     else{
-      /* = input.vlaue*/ 
+      //initialCourses에 newNema 넣기
     }
   }  
 
@@ -62,7 +62,7 @@ export default function CourseList() {
         <form className="add-form" onSubmit={handleAdd}>
           <input
             className="input"
-            value={newName}
+            value={newName}/*input에서 newName이라는 변수를 사용함*/
             onChange={(event) => setNewName(event.target.value)}
             placeholder="새 과목명을 입력하세요"
             aria-label="새 과목명"
