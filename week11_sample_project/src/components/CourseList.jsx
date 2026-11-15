@@ -22,9 +22,8 @@ export default function CourseList() {
       alert("뭐라도 넣어라");
       return;
     }
-    let course_id = 5;
     const newCourse = {
-      id: course_id + 1, 
+      id: courses.length > 0 ? courses[courses.length - 1].id + 1 : 1,
       name: newName, 
       category: "기타", 
       completed: false,
