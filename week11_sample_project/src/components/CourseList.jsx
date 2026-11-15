@@ -4,8 +4,8 @@ import { initialCourses } from "../data/courses.js";
 
 export default function CourseList() {
   // [제공] 초기 배열을 useState로 관리합니다.
-  const [courses, setCourses] = useState(initialCourses);//couts의 초기값 을 initialCourses로 설정
-  const [newName, setNewName] = useState("");//newName의 초기값을 ""으로 설정
+  const [courses, setCourses] = useState(initialCourses); //couts의 초기값 을 initialCourses로 설정
+  const [newName, setNewName] = useState(""); //newName의 초기값을 ""으로 설정
 
   // [제공] 삭제 기능: filter로 새 배열을 만들어 업데이트합니다.
   function handleDelete(id) {
@@ -17,17 +17,21 @@ export default function CourseList() {
   function handleAdd(event) {
     event.preventDefault();
     // TODO: 빈 입력 검사, 새 과목 객체 생성, setCourses 호출, 입력창 초기화
-  
+
     if (newName.trim() === "") {
       alert("뭐라도 넣어라");
       return;
     }
-    else{
-      //initialCourses에 newNema 넣기
-    }
-  }  
-
-  
+    let course_id = 5;
+    const newCourse = {
+      id: course_id + 1, // 겹치지 않는 임시 id
+      name: newName, 
+      category: "기타", 
+      completed: false,
+    };
+    setCourses((previous) => [...previous, newCourse]);
+    setNewName("");
+  }
   // TODO 2 (필수): 완료 상태 변경 기능을 구현하세요.
   function handleToggle(id) {
     // TODO: map과 spread(...)를 사용하여 해당 id의 completed를 반전
@@ -62,13 +66,13 @@ export default function CourseList() {
         <form className="add-form" onSubmit={handleAdd}>
           <input
             className="input"
-            value={newName}/*input에서 newName이라는 변수를 사용함*/
+            value={newName} /*input에서 newName이라는 변수를 사용함*/
             onChange={(event) => setNewName(event.target.value)}
             placeholder="새 과목명을 입력하세요"
             aria-label="새 과목명"
           />
           <button className="btn primary" type="submit" onClick={handleAdd}>
-            + Add Course  
+            + Add Course
           </button>
         </form>
         <div className="list-head">
