@@ -1,4 +1,13 @@
-step2
+1. Project Information: 프로젝트 소개, 주요 기능 및 원본 Sample Project URL    
+
+    :https://github.com/2026-2-OSS/week11_sample_project
+
+2. Installation: 설치·실행 방법 및 실행 화면
+
+        :
+        npm inatall
+        npm run dev
+3. Source Code Exploration:
 
 Project Structure: 주요 파일 3개의 역할:
 
@@ -43,7 +52,7 @@ Code Analysis: 주요 코드 2개(각 5~15줄)를 선택하여 동작 원리 설
     :과목이 비어있으면 등록된 과목이 없습니다를 보여주고 아니라면map으로 배열의 각 과목마다 CourseItem을 하나씩 렌더링한다.
 ))}
 
-STEP 3. Customizing
+4. Customizing
 
     1.변경 완료
 
@@ -53,3 +62,39 @@ STEP 3. Customizing
     3.stat strong.green 에서*#16856c >>#c40909로 변경*/
     .stat strong.blue 에서 *#4568b4>>#021d57로 변경*/
     .small-note 에서  /*#8a94a4에서>>#fc0303로 변경 */
+
+5. Feature Extension:
+
+        function handleAdd(event) {
+            event.preventDefault();
+            // TODO: 빈 입력 검사, 새 과목 객체 생성, setCourses 호출, 입력창 초기화
+
+            if (newName.trim() === "") {
+            alert("뭐라도 넣어라");
+            return;
+            }
+            let course_id = 5;
+            const newCourse = {
+                id: course_id + 1, 
+                name: newName, 
+                category: "기타", 
+                completed: false,
+            };
+            setCourses((previous) => [...previous, newCourse]);
+            setNewName("");
+        }  
+
+6. Deployment: 실제 접근 가능한 Vercel URL
+
+        :https://2026oss-22300304-week11.vercel.app/
+
+7. Weekly Review:
+
+        새롭게 배운 내용 3가지
+        :
+
+        어려웠던 점과 해결 방법
+        :
+
+        AI 활용 내용 및 느낀 점
+        :
